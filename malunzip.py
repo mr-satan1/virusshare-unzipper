@@ -5,11 +5,7 @@ import argparse
 # Currently optimized for VirusShare.com files.
 ## If you want to add for other services,
 ### adjust the listZip function as it looks for "VirusShare" string
-
-
 TypicalMalwareSharingPassword = 'infected'
-
-
 parser = argparse.ArgumentParser()
 parser.add_argument('--indir', help='Input directory containing zip samples from VirusShare',
                     required=True)
@@ -40,9 +36,3 @@ if __name__ == "__main__":
         listZip(args.indir)
         print("[*] Completed unzip operations on %s amount of files" % UnzipCounter)
         print('[*] Your malware is ready: %s' % args.outdir)
-
-
-
-
-
-
